@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WalterVetrivel/natours_node.git"
+  },
+  "author": "Jonas Schmedtmann, Walter Selvakumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WalterVetrivel/natours_node/issues"
+  },
+  "homepage": "https://github.com/WalterVetrivel/natours_node#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
