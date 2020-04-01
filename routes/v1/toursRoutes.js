@@ -8,15 +8,20 @@ const {
   createTour,
   updateTour,
   deleteTour
-} = require('../../controllers/v1/tours');
+} = require('../../controllers/v1/toursController');
+
+router.param('id', (req, res, next, val) => {
+  console.log(`The tour ID is: ${val}`);
+  next();
+});
 
 router
-  .route('/api/v1/tours')
+  .route('/')
   .get(getAllTours)
   .post(createTour);
 
 router
-  .route('/api/v1/tours/:id')
+  .route('/:id')
   .get(getTour)
   .patch(updateTour)
   .delete(deleteTour);

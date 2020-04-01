@@ -2,7 +2,8 @@
 const express = require('express');
 const morgan = require('morgan');
 
-const toursRoutes = require('./routes/v1/tours');
+const toursRouter = require('./routes/v1/toursRoutes');
+const usersRouter = require('./routes/v1/usersRoutes');
 
 const getRequestTime = require('./middleware/getRequestTime');
 
@@ -15,11 +16,7 @@ app.use(express.json());
 app.use(getRequestTime);
 
 // ROUTES
-app.use(toursRoutes);
+app.use('/api/v1/tours', toursRouter);
+app.use('/api/v1/users', usersRouter);
 
-// START SERVER
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}`);
-});
+module.exports = app;
